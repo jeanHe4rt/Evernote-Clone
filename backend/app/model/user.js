@@ -7,11 +7,6 @@ let userSchema = new mongoose.Schema({
   password: String, required: true,
   created_at: {type: Date, default: Date.now},
   updated_at: {type: Date, default: Date.now},
-  author: {
-    type:mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  }
 });
 
 userSchema.pre('save',(next) => {
