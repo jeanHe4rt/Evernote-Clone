@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let noteSchema = new mongoose.Schema({
   title:String,
-  body: String, 
+  body: String,
   created_at: {type: Date, default: Date.now},
   updated_at: {type: Date, default: Date.now},
   author: {
@@ -13,3 +13,4 @@ let noteSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Note', noteSchema);
+
