@@ -1,18 +1,16 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 let userSchema = new mongoose.Schema({
   name:String,
-  email: String, required: true, unique:true,
-  password: String, required: true,
+  email: {type: String, required: true, unique:true},
+  password:{ type:String, required: true },
   created_at: {type: Date, default: Date.now},
   updated_at: {type: Date, default: Date.now},
 });
 
-userSchema.pre('save',(next) => {
+userSchema.pre('save', function (next) {
   if (this.isNew || this.isModified('password')) {
-    const document = this;
-  } else {
     bcrypt.hash(this.password, 10,
       (err, hashedPassword) => {
         if (err)
@@ -22,7 +20,11 @@ userSchema.pre('save',(next) => {
           next();
         }
     });
+    
+  } else {
+    next();
   }
+  
 })
 
 module.exports = mongoose.model('User', userSchema);

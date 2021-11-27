@@ -1,16 +1,17 @@
 {
-  "name": "javascript-note-api",
+  "name": "backend",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "debug": "~4.3.2",
     "express": "~4.17.1",
     "http-errors": "~1.8.1",
     "mongoose": "^6.0.13",
+    "mongoose-timestamp": "^0.6.0",
     "morgan": "~1.10.0"
   },
   "devDependencies": {
