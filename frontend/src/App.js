@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
-import HomeScreen from "./screens/home";
 import "./App.scss";
-
+import Router from './routes';
 
 const App = () => (
   <Fragment>
-    <HomeScreen />;
+    <Router />
   </Fragment>
 );
 export default App;
