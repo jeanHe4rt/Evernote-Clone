@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
+import "./App.scss";
+import Router from './routes';
 
-const App = () => {
-  return (
-    <p> Meu site.com</p>
-  )
-}
+const App = () => (
+  <Fragment>
+    <Router />
+  </Fragment>
+);
 export default App;
