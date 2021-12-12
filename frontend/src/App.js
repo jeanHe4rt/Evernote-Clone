@@ -1,8 +1,11 @@
-import React from "react";
-import Header from "./components/header";
+import React, { Fragment } from "react";
+import HomeScreen from "./screens/home";
 import "./App.scss";
 
-const App = () => {
-  return <Header />;
-};
+
+const App = () => (
+  <Fragment>
+    <HomeScreen />;
+  </Fragment>
+);
 export default App;
