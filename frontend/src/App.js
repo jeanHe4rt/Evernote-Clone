@@ -1,8 +1,8 @@
 import React from "react";
+import Header from "./components/header";
+import "./App.scss";
 
 const App = () => {
-  return (
-    <p> Meu site.com</p>
-  )
-}
+  return <Header />;
+};
 export default App;
