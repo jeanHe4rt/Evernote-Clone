@@ -1,0 +1,10 @@
+import React, { Component } from "react";
+import { Route, Redirect, Navigate } from 'react-router-dom';
+import UsersService from "../../../services/users";
+
+const PrivateRoute = ( element => {
+  const auth = UsersService.login;
+  return auth ? element : <Navigate to='/login'/>;
+})
+
+  export default PrivateRoute;
