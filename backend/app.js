@@ -23,8 +23,8 @@ app.use(cors());
 app.use('/users', usersRouter);
 app.use('/notes', notesRouter);
 
-// app.listen(3000, function() {
-//   console.log('CORS-enabled web server listening on port 3000')
-// });
+app.listen(3001, function() {
+  console.log('CORS-enabled web server listening on port 3001');
+});
 
 module.exports = app
