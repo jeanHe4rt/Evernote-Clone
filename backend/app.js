@@ -26,5 +26,9 @@ app.use('/notes', notesRouter);
 app.listen(3001, function() {
   console.log('CORS-enabled web server listening on port 3001');
 });
+app.listen(process.env.PORT || 3001, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
+
 
 module.exports = app
