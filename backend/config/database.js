@@ -1,7 +1,7 @@
 const mongoose = require('mongoose') ;
 mongoose.Promise = global.Promise;
 require('dotenv').config();
-// mongodb+srv://jean:Ellen@2021@cluster0.o55rz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 require('dotenv').config();
